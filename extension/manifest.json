@@ -1,12 +1,17 @@
 {
-    "manifest_version": 1,
-    "name": "Orbi",
-    "version": "1.0.0",
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-        "js": ["content.js"]
+    "manifest_version": 3,
+    "name": "Orbi.",
+    "version": "1.0",
+    "description": "Tracking producutivity, entertainment, and social acitivities on your browser",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "assets/orbi_icon.png",
+      "default_title": "Orbi.",
+      "default_popup": "popup.html"
     }
-    ]
-
+    
 }
