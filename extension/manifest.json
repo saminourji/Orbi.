@@ -3,8 +3,9 @@
   "name": "Orbi.",
   "version": "1.0",
   "description": "Tracking producutivity, entertainment, and social acitivities on your browser",
-  "permissions": ["storage", "tabs", "webNavigation"],
+  "permissions": ["storage", "tabs", "webNavigation", "nativeMessaging"],
   "type": "module",
+  "key": "bidnpfafehdcgpahjfkldbcgnmhbfhda",
   "background": {
     "service_worker": "background.js"
   },
