@@ -9,9 +9,9 @@
       "service_worker": "background.js"
     },
     "action": {
-      "default_icon": "assets/orbi_icon.png",
+      "default_icon": "src/assets/orbi_icon.png",
       "default_title": "Orbi.",
-      "default_popup": "popup.html"
+      "default_popup": "src/index.js"
     }
     
 }
