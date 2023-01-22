@@ -1,0 +1,82 @@
+
+body {
+  background-color: black;
+  color: black;
+  font-family: 'K2D', sans-serif;
+  font-weight: bold;
+  width: 260px;
+  height: 330px;
+}
+
+.special-text {
+  color: red;
+}
+
+.logo img {
+  position: relative;
+  width: 25%;
+  left: 0; 
+  right: 0; 
+  margin-left: 37.5%; 
+  margin-right: auto; 
+}
+
+.logo {
+  border-radius: 1px;
+  position:relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 30px;
+}
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+.circle {
+  stroke-linecap: round;
+  animation: progress 2s ease-out forwards;
+}
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.rings {
+  position: relative;
+  border-radius: 1px;
+  height: 180px;
+  width: 100%;
+  margin: 0;
+}
+.rings svg {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+.rects {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+}
+.rects div{
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  width: 25%;
+  margin: 0% 4%;
+}
+.rects div h1,h2,h3{
+  margin: 0;
+}
+h1 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 18px;
+}

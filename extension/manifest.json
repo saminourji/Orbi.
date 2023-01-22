@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Orbi.",
+  "version": "1.0",
+  "description": "Tracking producutivity, entertainment, and social acitivities on your browser",
+  "permissions": ["storage", "tabs", "webNavigation", "nativeMessaging"],
+  "type": "module",
+  "key": "bidnpfafehdcgpahjfkldbcgnmhbfhda",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": "static/media/orbi_icon.png",
+    "default_title": "Orbi.",
+    "default_popup": "index.html"
+  }
+  
+}
