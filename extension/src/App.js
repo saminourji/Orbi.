@@ -10,13 +10,15 @@ const [media, setMedia] = useState(0);
 //goals in minutes; work-social-media
 // const [someState, setSomeState] =  useState({});
 
+
+useEffect(()=>{
 // eslint-disable-next-line
 chrome.storage.local.get(["workTime", "socialTime", "mediaTime"], function(results){
   console.log(results);
   setWork(results.workTime);
   setSocial(results.socialTime);
   setMedia(results.mediaTime);
-})
+})}, [work, social, media])
 
 const goals = [5,10,2];
 // useEffect(()=>{
@@ -55,9 +57,9 @@ const goals = [5,10,2];
           <Ring radius="12" width="3.5" color={color3} perct={perct3} />
         </div>
         <div className="rects">
-          <Rect hours={work/60} title="Work" color={color3} />
-          <Rect hours={social/60} title="Social" color={color2} />
-          <Rect hours={media/60} title="Media" color={color1} />
+          <Rect hours={(work/60).toFixed(1)} title="Work" color={color3} />
+          <Rect hours={(social/60).toFixed(1)} title="Social" color={color2} />
+          <Rect hours={(media/60).toFixed(1)} title="Media" color={color1} />
         </div>
         {/* This is the <span class="special-text">TML</span> body of the addon. */}
       </body>
