@@ -34,12 +34,26 @@ chrome.tabs.onActivated.addListener(
             chrome.storage.local.get(["logs"], function (result) {
                 let date = new Date();
                 let updated = [[tab.url, date.getTime()]].concat(result.logs);
-                console.log(updated)
+                // console.log(updated)
                 chrome.storage.local.set({ logs: updated })
             })
         }
         )
     });
+
+chrome.webNavigation.onCompleted.addListener(
+    function(activeInfo){
+        chrome.tabs.get(activeInfo.tabId, function (tab) {
+            chrome.storage.local.get(["logs"], function (result) {
+                let date = new Date();
+                let updated = [[tab.url, date.getTime()]].concat(result.logs);
+                // console.log(updated)
+                chrome.storage.local.set({ logs: updated })
+            })
+        }
+        )
+    }
+)
 
 chrome.storage.onChanged.addListener(
     function (changes, areaName) {

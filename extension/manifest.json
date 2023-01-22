@@ -3,8 +3,8 @@
   "name": "Orbi.",
   "version": "1.0",
   "description": "Tracking producutivity, entertainment, and social acitivities on your browser",
-  "permissions": ["storage", "tabs"],
-  "host_permissions": ["https://*.youtube.com/*"],
+  "permissions": ["storage", "tabs", "webNavigation"],
+  "type": "module",
   "background": {
     "service_worker": "background.js"
   },
