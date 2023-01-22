@@ -9,6 +9,12 @@ function App() {
   let perct3 = 85;
   let color3 = "#67675E";
   return (
+    <html>
+      <head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=K2D:wght@400;500;600;700;800&display=swap');
+        </style>
+      </head>
 <body>
   <header className = "logo">
     <img src = {logo} alt = "orbi logo"/>
@@ -19,12 +25,13 @@ function App() {
       <Ring radius="12" width="3.5" color={color3} perct={perct3}/>
     </div>
     <div className="rects">
-      <Rect hours="2.5" title="Work" color={color1}/>
-      <Rect hours="2.5" title="Work" color={color1}/>
-      <Rect hours="2.5" title="Work" color={color1}/>
+      <Rect hours="2.5" title="Work" color={color3}/>
+      <Rect hours="3.2" title="Social" color={color2}/>
+      <Rect hours="0.1" title="Media" color={color1}/>
     </div>
     {/* This is the <span class="special-text">TML</span> body of the addon. */}
 </body>
+</html>
   );
 }
 
@@ -62,8 +69,11 @@ function Ring(props) {
 function Rect(props) {
   let hours = props.hours;
   let title = props.title;
-  let color = props.color;
-  return (<div className="box"> "hELL"</div>)
+  let colorR = props.color;
+  return (<div className="box" style={{background: colorR}}>
+    <h3 >{title}</h3>
+    <h1>{hours}</h1>
+  </div>)
 }
 
 export default App;

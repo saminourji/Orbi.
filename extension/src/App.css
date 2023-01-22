@@ -1,7 +1,9 @@
+
 body {
   background-color: black;
-  color: #eee;
-
+  color: black;
+  font-family: 'K2D', sans-serif;
+  font-weight: bold;
   width: 16rem;
   height: 4rem;
 }
@@ -21,8 +23,6 @@ body {
 
 .logo {
   border-radius: 1px;
-  border-color: white;
-  border-style: solid;
   position:relative;
   margin-left: auto;
   margin-right: auto;
@@ -49,10 +49,9 @@ body {
 .rings {
   position: relative;
   border-radius: 1px;
-  border-color: white;
-  border-style: solid;
   height: 180px;
   width: 100%;
+  margin: 0;
 }
 .rings svg {
   position: absolute; 
@@ -63,17 +62,16 @@ body {
 }
 .rects {
   display: inline-block;
-  border-radius: 1px;
-  border-color: white;
-  border-style: solid;
   width: 100%;
-  
+  margin-top: 15px;
 }
 .rects div{
   display: inline-block;
-  border-radius: 1px;
-  border-color: white;
-  border-style: solid;
+  text-align: center;
+  border-radius: 5px;
   width: 23%;
   margin: 0% 4.5%;
+}
+.rects div h1,h2,h3{
+  margin: 0;
 }
